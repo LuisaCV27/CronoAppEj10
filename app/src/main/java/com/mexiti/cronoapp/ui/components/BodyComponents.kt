@@ -88,9 +88,13 @@ fun CronCard(title: String,
 
 
 /** Add into this section String Format Time   **/
-
-
-
+@Composable
+fun formatTiempo(time:Long):String{
+    val segundos = time % 60
+    val minutos = (time / 60) % 60
+    val horas = time / 3600
+    return String.format("%02d:%02d:%02d", horas, minutos,segundos)
+}
 
 
 
